@@ -1,8 +1,9 @@
 """Type definitions for Mindrove-related functions"""
 import enum
+import numpy as np
 from dataclasses import dataclass
 
-from nptyping import NDArray, Float64
+from numpy.typing import NDArray
 from typing import Tuple, Dict, Union, Optional
 
 from mindrove.board_shim import (
@@ -33,7 +34,7 @@ class MindroveChannels(str, enum.Enum):
    TEMPERATURE = "temperature"
    RESISTANCE = "resistance"
 
-MindroveSampleBuffer = Dict[MindroveChannels, Optional[NDArray[Float64]]]
+MindroveSampleBuffer = Dict[MindroveChannels, Optional[NDArray[np.float64]]]
 
 @dataclass(frozen = True)
 class MindroveInputParamsConstructor:
