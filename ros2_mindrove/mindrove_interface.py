@@ -87,7 +87,6 @@ class MindroveInterface(BoardShim):
       """      
       Cyclic sampling of Mindrove data. Will query the data at the sampling rate configured by the sensor.
 
-
       Args:
           lag_compensation (bool, optional): Will apply lag compensation by reducing the dynamic delays based 
           upon the estimated latency. Defaults to True.
